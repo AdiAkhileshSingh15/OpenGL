@@ -25,13 +25,13 @@ void display()
     glLineStipple(1, 0xAAAA);
     glEnable(GL_LINE_STIPPLE);
 
-    glColor3f(1.0f, 1.0f, 0.0f);
+    glColor3f(0.0f, 0.0f, 0.0f);
     glBegin(GL_LINES);
     glVertex2f(-200, 0);
     glVertex2f(600, 0);
     glEnd();
 
-    glColor3f(1.0f, 1.0f, 0.0f);
+    glColor3f(0.0f, 0.0f, 0.0f);
     glBegin(GL_LINES);
     glVertex2f(0, -400);
     glVertex2f(0, 400);
@@ -39,7 +39,7 @@ void display()
 
     glDisable(GL_LINE_STIPPLE);
 
-    glColor3f(1.0f, 1.0f, 0.0f);
+    glColor3f(1.0f, 0.0f, 0.0f);
     glBegin(GL_LINE_LOOP);
     for (int i = 0; i < V; i++)
         glVertex2f(P_old[0][i], P_old[1][i]);
@@ -47,7 +47,7 @@ void display()
 
     matrixMult(T, P_old, P_new);
 
-    glColor3f(1.0f, 0.0f, 0.0f);
+    glColor3f(0.0f, 0.0f, 1.0f);
     glBegin(GL_LINE_LOOP);
     for (int i = 0; i < V; i++)
         glVertex2f(P_new[0][i], P_new[1][i]);
